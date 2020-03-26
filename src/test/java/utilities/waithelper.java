@@ -33,7 +33,9 @@ public class waithelper
 		File ram = shot.getScreenshotAs(OutputType.FILE);
 		File f=new File(path+replaced1+".jpeg");
 		FileUtils.copyFile(ram, f);
+	
 		
 	}
+	
 
 }

@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -17,7 +18,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pom.LoginPage;
 
-public class Steps extends Base {
+public class Steps extends Base
+{
 	@Before
 	public void setUp() throws FileNotFoundException, IOException {
 
@@ -148,8 +150,15 @@ public class Steps extends Base {
 	 */
 	
 	@After
-	public void teardown() 
+	public void teardown(ITestResult res) 
 	{
+		
+		int number = res.getStatus();
+		System.out.println(number+"QAAAAAAAAAAAAAAAAAAAAAAAAA>>>>>>>>>>>>>>>>>QAAAAAAAAAAAAAAAAAAAAAAAA");
+		
+		
+		
+		
 		//int count = res.getStatus();
 		//System.out.println("number is intresting here that is :"+count);
 		driver.close();

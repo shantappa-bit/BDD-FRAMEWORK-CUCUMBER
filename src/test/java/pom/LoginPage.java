@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import utilities.waithelper;
 
@@ -13,6 +14,8 @@ public class LoginPage
 {
 	public WebDriver driver;
 	public waithelper help;
+	
+	
 	
 	//declaration
 	@FindBy(name="email")
